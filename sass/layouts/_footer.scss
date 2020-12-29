@@ -1,0 +1,29 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    background-color: darken($color: $color_background, $amount: 30);
+    padding: 25px;
+    &__title {
+        font-family: 'Shrikhand';
+        font-size: 1.1rem;
+        color: $color_quaternary;
+        margin-bottom: 20px;
+    }
+    &__nav-icon {
+        display: grid;
+        grid-template-columns: 23px 300px;
+        justify-content: left;
+        align-items: center;
+        color: $color_quaternary;
+        text-decoration: none;
+        margin-bottom: 11px;
+    }
+    &__icon {
+        font-size: 0.8rem;
+    }
+    &__nav-mention {
+        color: $color_quaternary;
+        text-decoration: none;
+        margin-bottom: 11px;
+    }
+}
