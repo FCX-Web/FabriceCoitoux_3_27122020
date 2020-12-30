@@ -9,6 +9,12 @@ main {
   font-family: "Roboto", "Shrikhand", Arial, Helvetica, sans-serif;
 }
 
+footer a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-bottom: 11px;
+}
+
 .footer {
   display: flex;
   flex-direction: column;
@@ -21,22 +27,13 @@ main {
   color: #ffffff;
   margin-bottom: 20px;
 }
-.footer__nav-icon {
+.footer__container {
   display: grid;
-  grid-template-columns: 23px 300px;
-  justify-content: left;
+  grid-template-columns: 23px auto;
   align-items: center;
-  color: #ffffff;
-  text-decoration: none;
-  margin-bottom: 11px;
 }
-.footer__icon {
+.footer__container--size-i {
   font-size: 0.8rem;
-}
-.footer__nav-mention {
-  color: #ffffff;
-  text-decoration: none;
-  margin-bottom: 11px;
 }
 
 header {
