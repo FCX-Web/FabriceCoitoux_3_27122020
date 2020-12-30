@@ -1,3 +1,9 @@
+footer a {
+    color: $color_quaternary;
+    text-decoration: none;
+    margin-bottom: 11px;
+}
+
 .footer {
     display: flex;
     flex-direction: column;
@@ -9,21 +15,12 @@
         color: $color_quaternary;
         margin-bottom: 20px;
     }
-    &__nav-icon {
+    &__container {
         display: grid;
-        grid-template-columns: 23px 300px;
-        justify-content: left;
+        grid-template-columns: 23px auto;
         align-items: center;
-        color: $color_quaternary;
-        text-decoration: none;
-        margin-bottom: 11px;
-    }
-    &__icon {
-        font-size: 0.8rem;
-    }
-    &__nav-mention {
-        color: $color_quaternary;
-        text-decoration: none;
-        margin-bottom: 11px;
+        &--size-i {
+            font-size: 0.8rem;
+        }
     }
 }
