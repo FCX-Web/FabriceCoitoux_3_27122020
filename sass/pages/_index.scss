@@ -1,0 +1,8 @@
+.preview {
+    padding-bottom: 47px;
+    background-color: lighten($color: $color_background, $amount: 47);
+    &__title {
+        padding-top: 60px;
+        margin: 0 20px 28px;
+    }
+}
