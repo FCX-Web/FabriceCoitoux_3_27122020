@@ -1,19 +1,62 @@
+.locate {
+    display: flex;
+    justify-content: center;
+    height: 49px;
+    align-items: center;
+    @include backcolor-lighten($color_background, 40);
+    &__i {
+        margin: 0 15px 0 92px;
+    }
+    &__input {
+        @include backcolor-lighten($color_background, 40);
+        border: none;
+    }
+}
+
 .teaser {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
     margin-bottom: 53px;
-    background-color: lighten($color: $color_background, $amount: 45);
+    padding: 43px 30px 57px 40px;
+    @include backcolor-lighten($color_background, 45);
+    &__title {
+        @include font-bold;
+        margin: 0 25px 22px;
+    }
+    &__discover {
+        margin-bottom: 30px;
+        @include color-darken($color_background, 10);
+    }
+    &__explore {
+        text-decoration: none;
+        color: $color_reverse;
+        @include font-bold;
+        background: linear-gradient(to bottom right, $color_secondary, $color_primary);
+        margin: auto;
+        padding: 25px 0;
+        width: 218px;
+        height: 20px;
+        border-radius: 40px;
+    }
 }
 
 .steps {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-bottom: 40px;
-    text-align: center;
+    &__title {
+        @include font-bold;
+    }
 }
 
 .preview {
     padding-bottom: 47px;
-    background-color: lighten($color: $color_background, $amount: 45);
+    @include backcolor-lighten($color_background, 45);
     &__title {
         padding-top: 60px;
         margin: 0 20px 28px;
-        font-weight: bold;
+        @include font-bold;
     }
 }

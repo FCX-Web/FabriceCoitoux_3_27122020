@@ -1,5 +1,5 @@
 footer a {
-    color: $color_quaternary;
+    color: $color_reverse;
     text-decoration: none;
     margin-bottom: 11px;
 }
@@ -7,12 +7,12 @@ footer a {
 .footer {
     display: flex;
     flex-direction: column;
-    background-color: darken($color: $color_background, $amount: 30);
+    @include backcolor-darken($color_background, 30);
     padding: 25px;
     &__title {
         font-family: 'Shrikhand';
         font-size: 1.1rem;
-        color: $color_quaternary;
+        color: $color_reverse;
         margin-bottom: 20px;
     }
     &__container {
