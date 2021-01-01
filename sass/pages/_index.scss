@@ -1,11 +1,38 @@
+.locate {
+    display: flex;
+    justify-content: center;
+    height: 49px;
+    align-items: center;
+    background-color: lighten($color: $color_background, $amount: 40);
+    box-shadow: 0 10px 20px #808080;
+    &__i {
+        margin: 0 15px 0 92px;
+    }
+    &__input {
+        background-color: lighten($color: $color_background, $amount: 40);
+        border: none;
+    }
+}
+
 .teaser {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-bottom: 53px;
     background-color: lighten($color: $color_background, $amount: 45);
+    &__title {
+        @include h2-title;
+    }
 }
 
 .steps {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-bottom: 40px;
-    text-align: center;
+    &__title {
+        @include h2-title;
+    }
 }
 
 .preview {
@@ -14,6 +41,6 @@
     &__title {
         padding-top: 60px;
         margin: 0 20px 28px;
-        font-weight: bold;
+        @include h2-title;
     }
 }

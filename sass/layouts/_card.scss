@@ -2,7 +2,7 @@
         display: flex;
         flex-direction: column;
         background-color: $color_quaternary;
-        box-shadow: 2px 3px lighten($color: $color_background, $amount: 44);
+        box-shadow: 2px 3px 18px lighten($color: $color_background, $amount: 40);
         margin: 0 20px 18px;
         border-radius: 15px;
         width: auto;
