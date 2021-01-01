@@ -1,8 +1,8 @@
     .card-rest {
         display: flex;
         flex-direction: column;
-        background-color: $color_quaternary;
-        box-shadow: 2px 3px 18px lighten($color: $color_background, $amount: 40);
+        background-color: $color_reverse;
+        box-shadow: 5px 5px 5px lighten($color_background, 40);
         margin: 0 20px 18px;
         border-radius: 15px;
         width: auto;
@@ -30,10 +30,10 @@
                 font-weight: bold;
             }
             &--color {
-                @include font-color-light;
+                @include color-darken($color_background, 10);
             }
             &__heart {
-                @include font-color-light;
+                @include color-darken($color_background, 10);
                 margin-top: 5px;
             }
         }

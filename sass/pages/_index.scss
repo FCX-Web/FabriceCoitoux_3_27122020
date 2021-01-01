@@ -3,13 +3,12 @@
     justify-content: center;
     height: 49px;
     align-items: center;
-    background-color: lighten($color: $color_background, $amount: 40);
-    box-shadow: 0 10px 20px #808080;
+    @include backcolor-lighten($color_background, 40);
     &__i {
         margin: 0 15px 0 92px;
     }
     &__input {
-        background-color: lighten($color: $color_background, $amount: 40);
+        @include backcolor-lighten($color_background, 40);
         border: none;
     }
 }
@@ -19,9 +18,9 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: 53px;
-    background-color: lighten($color: $color_background, $amount: 45);
+    @include backcolor-lighten($color_background, 45);
     &__title {
-        @include h2-title;
+        @include font-bold;
     }
 }
 
@@ -31,16 +30,16 @@
     align-items: center;
     margin-bottom: 40px;
     &__title {
-        @include h2-title;
+        @include font-bold;
     }
 }
 
 .preview {
     padding-bottom: 47px;
-    background-color: lighten($color: $color_background, $amount: 45);
+    @include backcolor-lighten($color_background, 45);
     &__title {
         padding-top: 60px;
         margin: 0 20px 28px;
-        @include h2-title;
+        @include font-bold;
     }
 }
