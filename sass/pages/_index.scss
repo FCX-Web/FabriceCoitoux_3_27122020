@@ -16,11 +16,28 @@
 .teaser {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    text-align: center;
     margin-bottom: 53px;
+    padding: 43px 30px 57px 40px;
     @include backcolor-lighten($color_background, 45);
     &__title {
         @include font-bold;
+        margin: 0 25px 22px;
+    }
+    &__discover {
+        margin-bottom: 30px;
+        @include color-darken($color_background, 10);
+    }
+    &__explore {
+        text-decoration: none;
+        color: $color_reverse;
+        @include font-bold;
+        background: linear-gradient(to bottom right, $color_secondary, $color_primary);
+        margin: auto;
+        padding: 25px 0;
+        width: 218px;
+        height: 20px;
+        border-radius: 40px;
     }
 }
 
