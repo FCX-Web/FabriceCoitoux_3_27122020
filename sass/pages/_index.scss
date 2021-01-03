@@ -34,7 +34,7 @@
         @include font-bold;
         background: linear-gradient(to bottom right, $color_secondary, $color_primary);
         margin: auto;
-        @include button(25px, 218px, 20px, 40px);
+        @include button(12.5px, 218px, 20px, 40px);
     }
 }
 
