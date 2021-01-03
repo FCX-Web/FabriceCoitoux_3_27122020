@@ -2,10 +2,6 @@
     color: darken($color, $amount);
 }
 
-@mixin font-bold {
-    font-weight: bold;
-}
-
 @mixin backcolor-lighten ($color, $amount) {
     background-color: lighten($color, $amount);
 }
