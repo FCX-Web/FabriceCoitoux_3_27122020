@@ -17,6 +17,7 @@ main {
   margin: 0 20px 18px;
   border-radius: 15px;
   width: auto;
+  max-width: 360px;
   height: 250px;
   text-decoration: none;
   color: #000000;
@@ -176,6 +177,8 @@ header img {
 }
 
 .preview {
+  display: flex;
+  flex-direction: column;
   padding-bottom: 47px;
   background-color: #f3f3f3;
 }
@@ -183,6 +186,11 @@ header img {
   padding-top: 60px;
   margin: 0 20px 28px;
   font-weight: bold;
+}
+.preview__list {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
 }
 
 /*# sourceMappingURL=style.css.map */

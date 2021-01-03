@@ -79,11 +79,18 @@
 }
 
 .preview {
+    display: flex;
+    flex-direction: column;
     padding-bottom: 47px;
     @include backcolor-lighten($color_background, 45);
     &__title {
         padding-top: 60px;
         margin: 0 20px 28px;
         font-weight: bold;
+    }
+    &__list {
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
     }
 }
