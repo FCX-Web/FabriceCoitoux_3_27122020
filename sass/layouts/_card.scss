@@ -10,12 +10,7 @@
     height: 250px;
     text-decoration: none;
     color: #000000;
-    @media screen and (min-width: map-get($breakpoints-min, tablet)) and (max-width: map-get($breakpoints-max, tablet)) {
-        max-width: 350px;
-    }
-    @media screen and (min-width: map-get($breakpoints-min, laptop)) {
-        margin: 0 10px 18px
-    }
+    @include media-card-rest;
     &__pocket {
         border-radius: 15px 15px 0 0;
         width: 100%;
