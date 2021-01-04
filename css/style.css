@@ -112,25 +112,25 @@ header img {
   left: 25px;
 }
 
-.doc {
+.flyer {
   display: flex;
   flex-direction: column;
-  position: relative;
 }
-.doc__pocket {
+.flyer__pocket {
   width: 100%;
   height: 260px;
   overflow: hidden;
 }
-.doc__pocket--img-cover {
+.flyer__pocket--img-cover {
   object-fit: cover;
   width: 100%;
   height: 260px;
 }
 
 .menu {
-  background-color: purple;
+  background-color: #f3f3f3;
   border-radius: 35px 35px 0 0;
+  margin-top: -40px;
 }
 .menu__title {
   display: flex;
@@ -162,7 +162,8 @@ header img {
   height: 4px;
   border-radius: 0;
 }
-.menu .item {
+
+.item {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -174,25 +175,26 @@ header img {
   height: 70px;
   border-radius: 15px;
 }
-.menu .item__description {
-  margin: 15px 30px 15px 12px;
+.item__description {
+  margin: 15px 0 15px 12px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.menu .item--font {
+.item__description--font {
   color: #1a1a1a;
   margin-bottom: 2px;
   font-size: 1.1rem;
   font-weight: bold;
 }
-.menu .item--color {
+.item__description--color {
   color: #676767;
   font-size: 0.95rem;
 }
-.menu .item__price {
-  color: #676767;
+.item__description__price {
+  color: #1a1a1a;
   margin: 0 22px 15px 0;
+  font-weight: bold;
 }
 
 .command {
@@ -201,7 +203,7 @@ header img {
   color: #ffffff;
   font-weight: bold;
   margin: auto;
-  background: linear-gradient(to bottom, #FF79DA, #9356DC);
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   margin: 0 auto 60px;
   padding: 15px 0;
   width: 186px;
