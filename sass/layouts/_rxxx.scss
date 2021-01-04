@@ -48,16 +48,6 @@
             @include button-index (0, 40px, 4px, 0)
         }
     }
-    &__command {
-        text-align: center;
-        text-decoration: none;
-        color: $color_reverse;
-        font-weight: bold;
-        margin: auto;
-        background: linear-gradient(to bottom right, $color_secondary, $color_primary);
-        margin: 0 auto 60px;
-        @include button-index(15px, 186px, 20px, 40px);
-    }
 }
 
 .item {
@@ -89,4 +79,15 @@
             font-weight: bold;
         }
     }
+}
+
+.command {
+    text-align: center;
+    text-decoration: none;
+    color: $color_reverse;
+    font-weight: bold;
+    margin: auto;
+    background: linear-gradient(to bottom right, $color_secondary, $color_primary);
+    margin: 0 auto 60px;
+    @include button-index(15px, 186px, 20px, 40px);
 }
