@@ -51,21 +51,13 @@
         flex-direction: column;
         align-items: center;
         margin: 0 20px 0 30px;
-        @media screen and (min-width: map-get($breakpoints-min, laptop)) {
-            flex-direction: row;
-            justify-content: space-around;
-        }
+        @include media-steps__list;
         &__item {
             margin: 0 auto 22px;
             @include button-index(25px, 325px, 20px, 25px);
             box-shadow: 5px 5px 5px lighten($color_background, 40);
             position: relative;
-            @media screen and (max-width: map-get($breakpoints-max, small)) {
-                @include button-index(25px, 260px, 20px, 25px);
-            }
-            @media screen and (min-width: map-get($breakpoints-min, laptop)) {
-                @include button-index(25px, 280px, 20px, 25px);
-            }
+            @include media-steps__list__item;
             &__i {
                 position: absolute;
                 left: 35px
@@ -103,9 +95,6 @@
         flex-direction: column;
         align-items: center;
         margin: 0 20px;
-        @media screen and (min-width: map-get($breakpoints-min, tablet)) {
-            flex-flow: row wrap;
-            justify-content: space-around;
-        }
+        @include media-preview__list;
     }
 }
