@@ -130,6 +130,8 @@ header img {
 }
 
 .menu {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   max-width: 800px;
   background-color: #f3f3f3;
@@ -208,7 +210,8 @@ header img {
 }
 
 .command {
-  text-align: center;
+  display: flex;
+  justify-content: center;
   text-decoration: none;
   color: #ffffff;
   font-weight: bold;
