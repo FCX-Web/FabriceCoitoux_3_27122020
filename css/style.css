@@ -112,6 +112,20 @@ header img {
   left: 25px;
 }
 
+.menu {
+  background-color: #f3f3f3;
+}
+.menu__pocket {
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+}
+.menu__pocket--img-cover {
+  object-fit: cover;
+  width: 100%;
+  height: 260px;
+}
+
 .locate {
   display: flex;
   justify-content: center;

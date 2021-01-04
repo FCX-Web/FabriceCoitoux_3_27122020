@@ -1,0 +1,13 @@
+.menu {
+    @include backcolor-lighten($color_background, 45);
+    &__pocket {
+        width: 100%;
+        height: 260px;
+        overflow: hidden;
+        &--img-cover {
+            object-fit: cover;
+            width: 100%;
+            height: 260px;
+        }
+    }
+}
