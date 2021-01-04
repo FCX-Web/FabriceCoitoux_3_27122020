@@ -125,6 +125,33 @@ header img {
   width: 100%;
   height: 260px;
 }
+.menu__title {
+  display: flex;
+  justify-content: space-between;
+  margin: 40px 35px 40px 20px;
+  font-family: "Shrikhand";
+  font-size: 1.1rem;
+}
+.menu__title__heart {
+  color: #676767;
+  margin-top: 5px;
+  font-size: 1.5rem;
+}
+.menu__section {
+  margin: 0 10px 45px 13px;
+}
+.menu__section__title {
+  margin-left: 8px;
+  text-transform: uppercase;
+  color: #676767;
+}
+.menu__section__button {
+  background-color: #ffffff;
+  padding: 15px 0;
+  width: 100%;
+  height: 68px;
+  border-radius: 15px;
+}
 
 .locate {
   display: flex;
