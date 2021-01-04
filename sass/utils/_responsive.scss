@@ -1,0 +1,32 @@
+@mixin media-steps__list {
+    @media screen and (min-width: map-get($breakpoints-min, laptop)) {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+@mixin media-steps__list__item {
+    @media screen and (max-width: map-get($breakpoints-max, small)) {
+        @include button-index(25px, 260px, 20px, 25px);
+    }
+    @media screen and (min-width: map-get($breakpoints-min, laptop)) {
+        @include button-index(25px, 280px, 20px, 25px);
+    }
+}
+
+@mixin media-preview__list {
+    @media screen and (min-width: map-get($breakpoints-min, tablet)) {
+        flex-flow: row wrap;
+        justify-content: space-around;
+    }
+}
+
+@mixin media-card-rest {
+    @media screen and (min-width: map-get($breakpoints-min, tablet)) and (max-width: map-get($breakpoints-max, tablet)) {
+        max-width: 350px;
+        margin: 0 10px 18px;
+    }
+    @media screen and (min-width: map-get($breakpoints-min, laptop)) {
+        margin: 0 10px 18px
+    }
+}
