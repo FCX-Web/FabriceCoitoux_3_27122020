@@ -101,6 +101,18 @@ header img {
   height: 1.8rem;
 }
 
+.header-restxxx {
+  box-shadow: none;
+  position: relative;
+}
+.header-restxxx__a--font {
+  color: #4d4d4d;
+  font-size: 1.2rem;
+  position: absolute;
+  top: 22px;
+  left: 25px;
+}
+
 .locate {
   display: flex;
   justify-content: center;

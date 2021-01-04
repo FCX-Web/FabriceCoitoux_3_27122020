@@ -8,3 +8,15 @@ header {
         height: 1.8rem;
     }
 }
+
+.header-restxxx {
+    box-shadow: none;
+    position: relative;
+    &__a--font {
+        @include color-darken($color_background, 20);
+        font-size: 1.2rem;
+        position: absolute;
+        top: 22px;
+        left: 25px;
+    }
+}
