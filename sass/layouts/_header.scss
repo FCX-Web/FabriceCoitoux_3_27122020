@@ -4,6 +4,9 @@ header {
     padding-top: 22px;
     margin-bottom: 3px;
     box-shadow: 0px -3px 20px #808080;
+    &__a--font {
+        @include color-darken($color_background, 40);
+    }
     img {
         height: 1.8rem;
     }
