@@ -182,24 +182,28 @@ header img {
   margin-bottom: 12px;
   padding: 0 0;
   width: 100%;
-  height: 70px;
+  height: 100%;
   border-radius: 15px;
 }
 .item__description {
+  display: flex;
+  flex-direction: column;
   margin: 15px 0 15px 12px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 .item__description--font {
   color: #1a1a1a;
   margin-bottom: 2px;
   font-size: 1.1rem;
   font-weight: bold;
+  width: 281px;
 }
 .item__description--color {
   color: #676767;
   font-size: 0.95rem;
+  width: 281px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .item__description__price {
   color: #1a1a1a;
