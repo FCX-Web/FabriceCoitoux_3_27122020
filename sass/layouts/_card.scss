@@ -10,7 +10,21 @@
     height: 250px;
     text-decoration: none;
     color: #000000;
+    position: relative;
     @include media-card-rest;
+    &__new {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        font-size: 0.9rem;
+        @include color-darken($color_tertiary, 50);
+        position: absolute;
+        top: 15px;
+        right: 12px;
+        background-color: $color_tertiary;
+        @include button-index(0px, 80px, 30px, 0)
+    }
     &__pocket {
         border-radius: 15px 15px 0 0;
         width: 100%;
