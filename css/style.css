@@ -1,3 +1,6 @@
+/*index*/
+/*card*/
+/*rxxx*/
 * {
   margin: 0;
   padding: 0;
@@ -21,6 +24,7 @@ main {
   height: 250px;
   text-decoration: none;
   color: #000000;
+  position: relative;
 }
 @media screen and (min-width: 669px) and (max-width: 991px) {
   .card-rest {
@@ -32,6 +36,22 @@ main {
   .card-rest {
     margin: 0 10px 18px;
   }
+}
+.card-rest__new {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #1b6150;
+  position: absolute;
+  top: 15px;
+  right: 12px;
+  background-color: #99E2D0;
+  padding: 0px 0;
+  width: 80px;
+  height: 30px;
+  border-radius: 0;
 }
 .card-rest__pocket {
   border-radius: 15px 15px 0 0;
@@ -143,7 +163,7 @@ header img {
   font-family: "Shrikhand";
   font-size: 1.1rem;
 }
-@media screen and (max-width: 374px) {
+@media screen and (max-width: 369px) {
   .menu__title {
     flex-direction: column;
     align-items: center;
@@ -299,7 +319,7 @@ header img {
   box-shadow: 5px 5px 5px #e6e6e6;
   position: relative;
 }
-@media screen and (max-width: 374px) {
+@media screen and (max-width: 369px) {
   .steps__list__item {
     padding: 25px 0;
     width: 260px;
