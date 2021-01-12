@@ -288,6 +288,10 @@ header img {
   height: 20px;
   border-radius: 40px;
 }
+.teaser__explore:hover {
+  box-shadow: 1px 1px 5px #808080;
+  background: white;
+}
 
 .steps {
   display: flex;

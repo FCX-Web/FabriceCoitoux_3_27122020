@@ -9,3 +9,7 @@
 @mixin backcolor-darken($color, $amount) {
     background-color: darken($color, $amount);
 }
+
+@mixin button-hover {
+    box-shadow: 1px 1px 5px $color_background;
+}
