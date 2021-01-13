@@ -1,3 +1,75 @@
+.load__item {
+  animation: items 1000ms ease-in-out;
+}
+.load__item--1 {
+  animation-delay: 50ms;
+}
+.load__item--2 {
+  animation-delay: 100ms;
+}
+.load__item--3 {
+  animation-delay: 150ms;
+}
+.load__item--4 {
+  animation-delay: 200ms;
+}
+.load__item--5 {
+  animation-delay: 250ms;
+}
+.load__item--6 {
+  animation-delay: 300ms;
+}
+.load__item--7 {
+  animation-delay: 350ms;
+}
+.load__item--8 {
+  animation-delay: 400ms;
+}
+.load__item--9 {
+  animation-delay: 450ms;
+}
+.load__item--10 {
+  animation-delay: 500ms;
+}
+.load__item--11 {
+  animation-delay: 550ms;
+}
+.load__item--12 {
+  animation-delay: 600ms;
+}
+.load__item--13 {
+  animation-delay: 650ms;
+}
+.load__item--14 {
+  animation-delay: 700ms;
+}
+.load__item--15 {
+  animation-delay: 750ms;
+}
+.load__item--16 {
+  animation-delay: 800ms;
+}
+.load__item--17 {
+  animation-delay: 850ms;
+}
+.load__item--18 {
+  animation-delay: 900ms;
+}
+.load__item--19 {
+  animation-delay: 950ms;
+}
+.load__item--20 {
+  animation-delay: 1000ms;
+}
+
+@keyframes items {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 /*index*/
 /*card*/
 /*rxxx*/
