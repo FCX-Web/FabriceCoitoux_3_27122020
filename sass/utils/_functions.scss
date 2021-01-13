@@ -1,0 +1,22 @@
+$num-items: 20;
+$anim-duration: 1000ms;
+$anim-delay: $anim-duration / $num-items;
+.load {
+    &__item {
+        animation: items $anim-duration ease-in-out;
+        @for $i from 1 through $num-items {
+            &--#{$i} {
+                animation-delay: $anim-delay * $i;
+            }
+        }
+    }
+}
+
+@keyframes items {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
