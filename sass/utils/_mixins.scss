@@ -9,3 +9,10 @@
 @mixin backcolor-darken($color, $amount) {
     background-color: darken($color, $amount);
 }
+
+@mixin button-hover($color_back, $color_1, $color_2, $amount) {
+    box-shadow: 3px 3px 3px $color_back;
+    $color_1_light: lighten($color_1, $amount);
+    $color_2_light: lighten($color_2, $amount);
+    background: linear-gradient(to bottom right, $color_2_light, $color_1_light);
+}

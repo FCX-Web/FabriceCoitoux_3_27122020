@@ -36,6 +36,9 @@
         background: linear-gradient(to bottom right, $color_secondary, $color_primary);
         margin: auto;
         @include button-index(15px, 218px, 20px, 40px);
+        &:hover {
+            @include button-hover($color_background, $color_primary, $color_secondary, 2);
+        }
     }
 }
 
