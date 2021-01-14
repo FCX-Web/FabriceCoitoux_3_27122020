@@ -11,8 +11,10 @@
 }
 
 @mixin button-hover($color_back, $color_1, $color_2, $amount) {
-    box-shadow: 3px 3px 3px $color_back;
-    $color_1_light: lighten($color_1, $amount);
-    $color_2_light: lighten($color_2, $amount);
-    background: linear-gradient(to bottom right, $color_2_light, $color_1_light);
+    box-shadow: 3px 3px 3px lighten($color_back, $amount);
+    background: linear-gradient(to bottom right, lighten($color_2, $amount), lighten($color_1, $amount));
+}
+
+@mixin load-sequence {
+    animation: items $load-duration ease-in-out backwards;
 }

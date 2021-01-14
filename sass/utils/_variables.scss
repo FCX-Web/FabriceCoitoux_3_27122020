@@ -5,3 +5,7 @@ $color_reverse: #ffffff;
 $color_background: #808080;
 $breakpoints-min: (small: 0, mobile: 370px, tablet: 669px, laptop: 992px, desktop: 1200px);
 $breakpoints-max: (small: 369px, mobile: 668px, tablet: 991px, laptop: 1199px, desktop: 1800px);
+// Loading
+$num-items:16;
+$load-duration: 600ms;
+$load-delay: 100ms;

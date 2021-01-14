@@ -13,7 +13,7 @@
         position: relative;
         @include media-card-rest;
         &:hover {
-            @include button-hover($color_background, $color_reverse, $color_reverse, 2);
+            @include button-hover($color_background, $color_reverse, $color_reverse, 10);
         }
         &__new {
             display: flex;
