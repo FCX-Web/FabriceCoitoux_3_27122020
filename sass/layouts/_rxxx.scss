@@ -61,7 +61,7 @@
     margin-bottom: 12px;
     @include button-index (0, 100%, 100%, 15px);
     &:hover {
-        @include button-hover($color_background, $color_reverse, $color_reverse, 2);
+        @include button-hover($color_background, $color_reverse, $color_reverse, 10);
     }
     &__description {
         display: flex;
