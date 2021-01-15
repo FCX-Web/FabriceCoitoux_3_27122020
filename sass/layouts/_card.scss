@@ -1,60 +1,80 @@
-    .card-rest {
-        display: flex;
-        flex-direction: column;
-        background-color: $color_reverse;
-        box-shadow: 5px 5px 5px lighten($color_background, 40);
+.card-rest {
+    display: flex;
+    flex-direction: column;
+    background-color: $color_reverse;
+    box-shadow: 5px 5px 5px lighten($color_background, 40);
+    border-radius: 15px;
+    width: 100%;
+    max-width: 500px;
+    height: 250px;
+    text-decoration: none;
+    color: #000000;
+    position: relative;
+    @include media-card-rest;
+    &:not(:last-child) {
         margin-bottom: 18px;
-        border-radius: 15px;
+    }
+    &:hover {
+        @include button-hover($color_background, $color_reverse, $color_reverse, 10);
+    }
+    &__new {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        font-size: 0.9rem;
+        @include color-darken($color_tertiary, 50);
+        position: absolute;
+        top: 15px;
+        right: 12px;
+        background-color: $color_tertiary;
+        @include button-index(0px, 80px, 30px, 0)
+    }
+    &__pocket {
+        border-radius: 15px 15px 0 0;
         width: 100%;
-        max-width: 500px;
-        height: 250px;
-        text-decoration: none;
-        color: #000000;
-        position: relative;
-        @include media-card-rest;
-        &:hover {
-            @include button-hover($color_background, $color_reverse, $color_reverse, 10);
-        }
-        &__new {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-weight: bold;
-            font-size: 0.9rem;
-            @include color-darken($color_tertiary, 50);
-            position: absolute;
-            top: 15px;
-            right: 12px;
-            background-color: $color_tertiary;
-            @include button-index(0px, 80px, 30px, 0)
-        }
-        &__pocket {
-            border-radius: 15px 15px 0 0;
+        height: 175px;
+        overflow: hidden;
+        margin-bottom: 20px;
+        &--img-cover {
+            object-fit: cover;
             width: 100%;
             height: 175px;
-            overflow: hidden;
-            margin-bottom: 20px;
-            &--img-cover {
-                object-fit: cover;
-                width: 100%;
-                height: 175px;
+        }
+    }
+    &__description {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0 15px 20px;
+        &--weight {
+            font-weight: bold;
+        }
+        &--color {
+            @include color-darken($color_background, 10);
+        }
+        &__heart {
+            @include color-darken($color_background, 10);
+            padding: 5px 10px;
+            font-size: 1.5rem;
+            position: absolute;
+            right: 0;
+            &:hover {
+                opacity: 0;
+                z-index: -1
             }
         }
-        &__description {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            margin: 0 25px 20px 15px;
-            &--weight {
-                font-weight: bold;
-            }
-            &--color {
-                @include color-darken($color_background, 10);
-            }
-            &__heart {
-                @include color-darken($color_background, 10);
-                margin-top: 5px;
-                font-size: 1.5rem;
+        &--button {
+            background-color: $color_primary;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            right: 0;
+            &:hover {
+                opacity: 0;
+                z-index: -1;
             }
         }
     }
+}
