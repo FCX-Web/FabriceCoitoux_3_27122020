@@ -18,6 +18,14 @@
     z-index: -1;
   }
 }
+@keyframes trans-heart {
+  0% {
+    color: #ffffff;
+  }
+  100% {
+    color: #9356DC;
+  }
+}
 /*index*/
 /*card*/
 /*rxxx*/
@@ -92,7 +100,6 @@ main {
   height: 175px;
 }
 .card-rest__description {
-  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -104,27 +111,36 @@ main {
 .card-rest__description--color {
   color: #676767;
 }
-.card-rest__description__heart {
+.card-rest__description__button {
+  position: relative;
+  width: 38px;
+  text-align: center;
+  border: none;
+  background: none;
+}
+.card-rest__description__button__heart {
+  position: absolute;
+  top: 0;
+  right: 7px;
   color: #676767;
-  padding: 5px 10px;
   font-size: 1.5rem;
+  z-index: 1;
+}
+.card-rest__description__button:hover .card-rest__description__button__heart--colored {
+  z-index: 1;
+  opacity: 1;
+  animation: trans-heart 500ms ease-in;
+  -webkit-animation: trans-heart 500ms ease-in;
+}
+.card-rest__description__button__heart--colored {
   position: absolute;
-  right: 0;
-}
-.card-rest__description__heart:hover {
-  opacity: 0;
+  top: 0;
+  right: 7px;
+  font-size: 1.5rem;
+  color: #9356DC;
   z-index: -1;
-}
-.card-rest__description--button {
-  background-color: #9356DC;
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  right: 0;
-}
-.card-rest__description--button:hover {
   opacity: 0;
-  z-index: -1;
+  transition: opacity;
 }
 
 footer a {
@@ -243,6 +259,7 @@ header img {
   align-items: flex-end;
   background-color: #ffffff;
   text-decoration: none;
+  position: relative;
   padding: 0 0;
   width: 100%;
   height: 100%;
@@ -278,6 +295,24 @@ header img {
   color: #1a1a1a;
   margin: 0 22px 15px 0;
   font-weight: bold;
+}
+.item__choice-button {
+  border: none;
+  position: absolute;
+  right: 0;
+  border-radius: 0 15px 15px 0;
+  width: 70px;
+  height: 70px;
+  background-color: #99E2D0;
+}
+.item__choice-button__check {
+  border: 1px solid #ffffff;
+  border-radius: 30px;
+  color: #99E2D0;
+  background-color: #ffffff;
+  font-size: 1.2rem;
+  width: 29px;
+  padding: 5px 0;
 }
 
 .load__item--1 {
