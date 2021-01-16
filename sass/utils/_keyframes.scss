@@ -19,3 +19,12 @@
         z-index: -1;
     }
 }
+
+@keyframes trans-heart {
+    0% {
+        color: $color_reverse;
+    }
+    100% {
+        color: $color_primary;
+    }
+}
