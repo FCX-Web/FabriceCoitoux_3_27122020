@@ -65,6 +65,13 @@
     }
     &:hover {
         @include button-hover($color_background, $color_reverse, $color_reverse, 10);
+        & .click {
+            transform-origin: right;
+            animation: item-choice 500ms forwards;
+        }
+        & .click__check {
+            animation: item-click 500ms forwards;
+        }
     }
     &__description {
         display: flex;
@@ -100,35 +107,37 @@
                 margin: 0 25px 15px 0;
             }
         }
-    }
-    &__choice-button {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border: none;
-        position: absolute;
-        right: 0;
-        border-radius: 0 15px 15px 0;
-        width: 72px;
-        height: 100%;
-        background-color: $color_tertiary;
-        transform: translateX(10000px);
-        &:hover {
-            // transform-origin: right 50%;
-            animation: item-choice 1000ms;
-            // animation: item-choice 1000ms timing-function delay iteration-count 
-            // direction fill-mode;
-        }
-        &__check {
-            border: 1px solid $color_reverse;
-            border-radius: 30px;
-            color: $color_tertiary;
-            background-color: $color_reverse;
-            font-size: 1.2rem;
-            width: 29px;
-            padding: 5px 0;
+        &__choice-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: none;
+            position: absolute;
+            right: 0;
+            border-radius: 0 15px 15px 0;
+            width: 0;
+            height: 100%;
+            background-color: $color_tertiary;
+            &__check {
+                border: 1px solid $color_reverse;
+                border-radius: 30px;
+                color: $color_tertiary;
+                background-color: $color_reverse;
+                font-size: 1.2rem;
+                width: 29px;
+                padding: 5px 0;
+                text-align: center;
+            }
         }
     }
+}
+
+// .click {
+//     transform: translateX(100px);
+// }
+.click__check {
+    opacity: 0;
+    transform: rotate(0turn);
 }
 
 .load__item {

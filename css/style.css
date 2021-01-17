@@ -28,10 +28,20 @@
 }
 @keyframes item-choice {
   0% {
-    transform: translateX(-10000);
+    width: 0;
   }
   100% {
-    transform: translateX(0);
+    width: 72px;
+  }
+}
+@keyframes item-click {
+  0% {
+    opacity: 1;
+    transform: rotate(0turn);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(2turn);
   }
 }
 /*index*/
@@ -280,6 +290,13 @@ header img {
   box-shadow: 3px 3px 3px #9a9a9a;
   background: linear-gradient(to bottom right, white, white);
 }
+.item:hover .click {
+  transform-origin: right;
+  animation: item-choice 500ms forwards;
+}
+.item:hover .click__check {
+  animation: item-click 500ms forwards;
+}
 .item__description {
   display: flex;
   flex-direction: column;
@@ -315,7 +332,7 @@ header img {
 .item__description__price--amount {
   margin: 0 25px 15px 0;
 }
-.item__choice-button {
+.item__description__choice-button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -323,15 +340,11 @@ header img {
   position: absolute;
   right: 0;
   border-radius: 0 15px 15px 0;
-  width: 72px;
+  width: 0;
   height: 100%;
   background-color: #99E2D0;
-  transform: translateX(10000px);
 }
-.item__choice-button:hover {
-  animation: item-choice 1000ms;
-}
-.item__choice-button__check {
+.item__description__choice-button__check {
   border: 1px solid #ffffff;
   border-radius: 30px;
   color: #99E2D0;
@@ -339,6 +352,12 @@ header img {
   font-size: 1.2rem;
   width: 29px;
   padding: 5px 0;
+  text-align: center;
+}
+
+.click__check {
+  opacity: 0;
+  transform: rotate(0turn);
 }
 
 .load__item--1 {
