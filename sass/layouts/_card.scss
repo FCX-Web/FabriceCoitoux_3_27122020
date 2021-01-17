@@ -1,90 +1,90 @@
-        .card-rest {
-            display: flex;
-            flex-direction: column;
-            background-color: $color_reverse;
-            box-shadow: 5px 5px 5px lighten($color_background, 40);
-            border-radius: 15px;
+.card-rest {
+    display: flex;
+    flex-direction: column;
+    background-color: $color_reverse;
+    box-shadow: 5px 5px 5px lighten($color_background, 40);
+    border-radius: 15px;
+    width: 100%;
+    max-width: 500px;
+    height: 250px;
+    text-decoration: none;
+    color: #000000;
+    position: relative;
+    @include media-card-rest;
+    &:not(:last-child) {
+        margin-bottom: 18px;
+    }
+    &:hover {
+        @include button-hover($color_background, $color_reverse, $color_reverse, 10);
+    }
+    &__new {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        font-size: 0.9rem;
+        @include color-darken($color_tertiary, 50);
+        position: absolute;
+        top: 15px;
+        right: 12px;
+        background-color: $color_tertiary;
+        @include button-index(0px, 80px, 30px, 0)
+    }
+    &__pocket {
+        border-radius: 15px 15px 0 0;
+        width: 100%;
+        height: 175px;
+        overflow: hidden;
+        margin-bottom: 20px;
+        &--img-cover {
+            object-fit: cover;
             width: 100%;
-            max-width: 500px;
-            height: 250px;
-            text-decoration: none;
-            color: #000000;
+            height: 175px;
+        }
+    }
+    &__description {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0 15px 20px;
+        &--weight {
+            font-weight: bold;
+        }
+        &--color {
+            @include color-darken($color_background, 10);
+        }
+        &__button {
             position: relative;
-            @include media-card-rest;
-            &:not(:last-child) {
-                margin-bottom: 18px;
+            width: 38px;
+            text-align: center;
+            border: none;
+            background: none;
+            &__heart {
+                position: absolute;
+                top: 0;
+                right: 7px;
+                @include color-darken($color_background, 10);
+                font-size: 1.5rem;
+                z-index: 1;
             }
             &:hover {
-                @include button-hover($color_background, $color_reverse, $color_reverse, 10);
+                & .card-rest__description__button__heart--colored {
+                    z-index: 1;
+                    opacity: 1;
+                    animation: trans-heart 500ms ease-in;
+                    -webkit-animation: trans-heart 500ms ease-in;
+                }
             }
-            &__new {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                font-weight: bold;
-                font-size: 0.9rem;
-                @include color-darken($color_tertiary, 50);
+            &__heart--colored {
                 position: absolute;
-                top: 15px;
-                right: 12px;
-                background-color: $color_tertiary;
-                @include button-index(0px, 80px, 30px, 0)
-            }
-            &__pocket {
-                border-radius: 15px 15px 0 0;
-                width: 100%;
-                height: 175px;
-                overflow: hidden;
-                margin-bottom: 20px;
-                &--img-cover {
-                    object-fit: cover;
-                    width: 100%;
-                    height: 175px;
-                }
-            }
-            &__description {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                margin: 0 15px 20px;
-                &--weight {
-                    font-weight: bold;
-                }
-                &--color {
-                    @include color-darken($color_background, 10);
-                }
-                &__button {
-                    position: relative;
-                    width: 38px;
-                    text-align: center;
-                    border: none;
-                    background: none;
-                    &__heart {
-                        position: absolute;
-                        top: 0;
-                        right: 7px;
-                        @include color-darken($color_background, 10);
-                        font-size: 1.5rem;
-                        z-index: 1;
-                    }
-                    &:hover {
-                        & .card-rest__description__button__heart--colored {
-                            z-index: 1;
-                            opacity: 1;
-                            animation: trans-heart 500ms ease-in;
-                            -webkit-animation: trans-heart 500ms ease-in;
-                        }
-                    }
-                    &__heart--colored {
-                        position: absolute;
-                        top: 0;
-                        right: 7px;
-                        font-size: 1.5rem;
-                        color: $color_primary;
-                        z-index: -1;
-                        opacity: 0;
-                        transition: opacity;
-                    }
-                }
+                top: 0;
+                right: 7px;
+                font-size: 1.5rem;
+                color: $color_primary;
+                z-index: -1;
+                opacity: 0;
+                transition: opacity;
             }
         }
+    }
+}

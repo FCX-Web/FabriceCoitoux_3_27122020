@@ -65,12 +65,19 @@
     }
     &:hover {
         @include button-hover($color_background, $color_reverse, $color_reverse, 10);
+        & .click {
+            transform-origin: right;
+            animation: item-choice 500ms forwards;
+        }
+        & .click__check {
+            animation: item-click 500ms forwards;
+        }
     }
     &__description {
         display: flex;
         flex-direction: column;
         margin: 15px 0 15px 12px;
-        width: 79%;
+        width: 280px;
         &--font {
             @include color-darken($color_background, 40);
             margin-bottom: 2px;
@@ -86,28 +93,51 @@
         }
         &__price {
             @include color-darken($color_background, 40);
-            margin: 0 22px 15px 0;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            border: none;
+            position: absolute;
+            right: 0;
+            border-radius: 0 15px 15px 0;
+            width: 72px;
+            height: 100%;
             font-weight: bold;
+            &--amount {
+                margin: 0 25px 15px 0;
+            }
+        }
+        &__choice-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: none;
+            position: absolute;
+            right: 0;
+            border-radius: 0 15px 15px 0;
+            width: 0;
+            height: 100%;
+            background-color: $color_tertiary;
+            &__check {
+                border: 1px solid $color_reverse;
+                border-radius: 30px;
+                color: $color_tertiary;
+                background-color: $color_reverse;
+                font-size: 1.2rem;
+                width: 29px;
+                padding: 5px 0;
+                text-align: center;
+            }
         }
     }
-    &__choice-button {
-        border: none;
-        position: absolute;
-        right: 0;
-        border-radius: 0 15px 15px 0;
-        width: 70px;
-        height: 70px;
-        background-color: $color_tertiary;
-        &__check {
-            border: 1px solid $color_reverse;
-            border-radius: 30px;
-            color: $color_tertiary;
-            background-color: $color_reverse;
-            font-size: 1.2rem;
-            width: 29px;
-            padding: 5px 0;
-        }
-    }
+}
+
+// .click {
+//     transform: translateX(100px);
+// }
+.click__check {
+    opacity: 0;
+    transform: rotate(0turn);
 }
 
 .load__item {

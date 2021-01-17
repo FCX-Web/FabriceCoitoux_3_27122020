@@ -28,3 +28,31 @@
         color: $color_primary;
     }
 }
+
+// @keyframes item-choice {
+//     0% {
+//         transform: translateX(13px) scaleX(0);
+//     }
+//     100% {
+//         transform: translateX(0px) scale(1);
+//     }
+// }
+@keyframes item-choice {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 72px;
+    }
+}
+
+@keyframes item-click {
+    0% {
+        opacity: 1;
+        transform: rotate(0turn);
+    }
+    100% {
+        opacity: 1;
+        transform: rotate(2turn);
+    }
+}

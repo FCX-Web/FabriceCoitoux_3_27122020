@@ -26,6 +26,24 @@
     color: #9356DC;
   }
 }
+@keyframes item-choice {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 72px;
+  }
+}
+@keyframes item-click {
+  0% {
+    opacity: 1;
+    transform: rotate(0turn);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(2turn);
+  }
+}
 /*index*/
 /*card*/
 /*rxxx*/
@@ -272,11 +290,18 @@ header img {
   box-shadow: 3px 3px 3px #9a9a9a;
   background: linear-gradient(to bottom right, white, white);
 }
+.item:hover .click {
+  transform-origin: right;
+  animation: item-choice 500ms forwards;
+}
+.item:hover .click__check {
+  animation: item-click 500ms forwards;
+}
 .item__description {
   display: flex;
   flex-direction: column;
   margin: 15px 0 15px 12px;
-  width: 79%;
+  width: 280px;
 }
 .item__description--font {
   color: #1a1a1a;
@@ -293,19 +318,33 @@ header img {
 }
 .item__description__price {
   color: #1a1a1a;
-  margin: 0 22px 15px 0;
-  font-weight: bold;
-}
-.item__choice-button {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
   border: none;
   position: absolute;
   right: 0;
   border-radius: 0 15px 15px 0;
-  width: 70px;
-  height: 70px;
+  width: 72px;
+  height: 100%;
+  font-weight: bold;
+}
+.item__description__price--amount {
+  margin: 0 25px 15px 0;
+}
+.item__description__choice-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  position: absolute;
+  right: 0;
+  border-radius: 0 15px 15px 0;
+  width: 0;
+  height: 100%;
   background-color: #99E2D0;
 }
-.item__choice-button__check {
+.item__description__choice-button__check {
   border: 1px solid #ffffff;
   border-radius: 30px;
   color: #99E2D0;
@@ -313,6 +352,12 @@ header img {
   font-size: 1.2rem;
   width: 29px;
   padding: 5px 0;
+  text-align: center;
+}
+
+.click__check {
+  opacity: 0;
+  transform: rotate(0turn);
 }
 
 .load__item--1 {
