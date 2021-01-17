@@ -28,3 +28,12 @@
         color: $color_primary;
     }
 }
+
+@keyframes item-choice {
+    0% {
+        transform: translateX(-10000);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
