@@ -36,12 +36,10 @@
 }
 @keyframes item-click {
   0% {
-    opacity: 1;
     transform: rotate(0turn);
   }
   100% {
-    opacity: 1;
-    transform: rotate(2turn);
+    transform: rotate(1turn);
   }
 }
 /*index*/
@@ -292,16 +290,37 @@ header img {
 }
 .item:hover .click {
   transform-origin: right;
-  animation: item-choice 500ms forwards;
+  animation: item-choice 500ms both;
 }
 .item:hover .click__check {
-  animation: item-click 500ms forwards;
+  animation: item-click 500ms both;
+}
+.item:hover .item__description__price {
+  transition: 500ms;
+  right: 72px;
+}
+.item:hover .item__description__price--amount {
+  margin-right: 10px;
+}
+.item:hover .item__description {
+  transition: 500ms;
+  width: 60%;
+}
+.item:hover .item__description--font {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .item__description {
   display: flex;
   flex-direction: column;
   margin: 15px 0 15px 12px;
-  width: 280px;
+  width: 80%;
+}
+@media screen and (max-width: 369px) {
+  .item__description {
+    width: 70%;
+  }
 }
 .item__description--font {
   color: #1a1a1a;
@@ -324,6 +343,7 @@ header img {
   border: none;
   position: absolute;
   right: 0;
+  transition: right 500ms;
   border-radius: 0 15px 15px 0;
   width: 72px;
   height: 100%;
@@ -331,6 +351,7 @@ header img {
 }
 .item__description__price--amount {
   margin: 0 25px 15px 0;
+  transition: margin-right 500ms;
 }
 .item__description__choice-button {
   display: flex;
@@ -343,6 +364,7 @@ header img {
   width: 0;
   height: 100%;
   background-color: #99E2D0;
+  overflow: hidden;
 }
 .item__description__choice-button__check {
   border: 1px solid #ffffff;
@@ -356,7 +378,6 @@ header img {
 }
 
 .click__check {
-  opacity: 0;
   transform: rotate(0turn);
 }
 

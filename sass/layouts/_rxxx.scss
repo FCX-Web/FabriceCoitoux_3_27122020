@@ -67,17 +67,34 @@
         @include button-hover($color_background, $color_reverse, $color_reverse, 10);
         & .click {
             transform-origin: right;
-            animation: item-choice 500ms forwards;
+            animation: item-choice 500ms both;
         }
         & .click__check {
-            animation: item-click 500ms forwards;
+            animation: item-click 500ms both;
+        }
+        & .item__description__price {
+            transition: 500ms;
+            right: 72px;
+            &--amount {
+                margin-right: 10px;
+            }
+        }
+        & .item__description {
+            transition: 500ms;
+            width: 60%;
+            &--font {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
         }
     }
     &__description {
         display: flex;
         flex-direction: column;
         margin: 15px 0 15px 12px;
-        width: 280px;
+        width: 80%;
+        @include item-description;
         &--font {
             @include color-darken($color_background, 40);
             margin-bottom: 2px;
@@ -99,12 +116,14 @@
             border: none;
             position: absolute;
             right: 0;
+            transition: right 500ms;
             border-radius: 0 15px 15px 0;
             width: 72px;
             height: 100%;
             font-weight: bold;
             &--amount {
                 margin: 0 25px 15px 0;
+                transition: margin-right 500ms;
             }
         }
         &__choice-button {
@@ -118,6 +137,7 @@
             width: 0;
             height: 100%;
             background-color: $color_tertiary;
+            overflow: hidden;
             &__check {
                 border: 1px solid $color_reverse;
                 border-radius: 30px;
@@ -132,11 +152,7 @@
     }
 }
 
-// .click {
-//     transform: translateX(100px);
-// }
 .click__check {
-    opacity: 0;
     transform: rotate(0turn);
 }
 
