@@ -1,3 +1,11 @@
+@keyframes spinner {
+  0% {
+    transform: translate3d(-50%, -50%, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate3d(-50%, -50%, 0) rotate(360deg);
+  }
+}
 @keyframes items {
   0% {
     opacity: 0;
@@ -24,14 +32,6 @@
   }
   100% {
     color: #9356DC;
-  }
-}
-@keyframes item-choice {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 72px;
   }
 }
 @keyframes item-click {
@@ -288,15 +288,13 @@ header img {
   box-shadow: 3px 3px 3px #9a9a9a;
   background: linear-gradient(to bottom right, white, white);
 }
-.item:hover .click {
-  transform-origin: right;
-  animation: item-choice 500ms both;
+.item:hover .item__description__choice-button {
+  width: 72px;
 }
 .item:hover .click__check {
   animation: item-click 500ms both;
 }
 .item:hover .item__description__price {
-  transition: 500ms;
   right: 72px;
 }
 .item:hover .item__description__price--amount {
@@ -362,6 +360,7 @@ header img {
   right: 0;
   border-radius: 0 15px 15px 0;
   width: 0;
+  transition: width 500ms;
   height: 100%;
   background-color: #99E2D0;
   overflow: hidden;
@@ -463,6 +462,23 @@ header img {
 .command:hover {
   box-shadow: 3px 3px 3px #858585;
   background: linear-gradient(to bottom right, #ff83dd, #985ede);
+}
+
+.spin::before {
+  animation: spinner 1.5s linear;
+  animation-iteration-count: 5;
+  animation-play-state: inherit;
+  border: solid 5px #cfd0d1;
+  border-bottom-color: #9356DC;
+  border-radius: 50%;
+  content: "";
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  will-change: transform;
 }
 
 .locate {

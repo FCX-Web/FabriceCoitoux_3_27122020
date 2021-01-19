@@ -65,15 +65,13 @@
     }
     &:hover {
         @include button-hover($color_background, $color_reverse, $color_reverse, 10);
-        & .click {
-            transform-origin: right;
-            animation: item-choice 500ms both;
+        & .item__description__choice-button {
+            width: 72px;
         }
         & .click__check {
             animation: item-click 500ms both;
         }
         & .item__description__price {
-            transition: 500ms;
             right: 72px;
             &--amount {
                 margin-right: 10px;
@@ -135,6 +133,7 @@
             right: 0;
             border-radius: 0 15px 15px 0;
             width: 0;
+            transition: width 500ms;
             height: 100%;
             background-color: $color_tertiary;
             overflow: hidden;
