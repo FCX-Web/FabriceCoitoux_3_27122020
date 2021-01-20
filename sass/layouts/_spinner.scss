@@ -1,15 +1,51 @@
-.spin::before {
-    animation: spinner 1000ms ease-in-out;
-    animation-iteration-count: 4;
-    animation-play-state: inherit;
-    border: solid 5px #cfd0d1;
-    border-bottom-color: #1c87c9;
-    border-radius: 50%;
-    content: "";
-    height: 40px;
-    width: 40px;
+$duration: 3000ms;
+main {
+    opacity: 1;
+    z-index: 1;
+    animation: loader $duration;
+}
+
+.spin-title {
     position: absolute;
-    top: 52%;
-    left: 50%;
-    transform: translate3d(-50%, -50%, 0);
+    top: 40%;
+    left: 15%;
+    width: 70%;
+    text-align: center;
+    font-family: 'Shrikhand';
+    color: #000000;
+    font-weight: bold;
+    font-size: 2.5rem;
+    &__letter {
+        opacity: 0;
+        z-index: -1;
+        display: inline-block;
+        transform: rotateY(0turn);
+        animation: letter-rotation $duration;
+    }
+}
+
+.bar {
+    z-index: -1;
+    opacity: 0;
+    position: relative;
+    animation: loader-bar $duration;
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    border: 2px solid #000000;
+    height: 10px;
+    width: 70%;
+    &--progression {
+        z-index: -1;
+        opacity: 0;
+        background: linear-gradient(to right, #ff83dd, #985ede);
+        transform: scaleX(0);
+        transform-origin: left;
+        animation: progress-bar $duration;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 10px;
+        width: 100%;
+    }
 }
