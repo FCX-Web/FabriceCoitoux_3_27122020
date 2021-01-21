@@ -29,9 +29,9 @@
     transform: rotateY(2turn);
   }
   100% {
-    transform: rotateY(2turn);
     opacity: 0;
     z-index: -1;
+    transform: rotateY(2turn);
   }
 }
 @keyframes loader-bar {
@@ -85,11 +85,10 @@
     z-index: 1;
     animation-timing-function: linear;
   }
-  90% {
+  80% {
     transform: scaleX(1);
     opacity: 1;
     z-index: 1;
-    animation-timing-function: linear;
   }
   100% {
     transform: scaleX(1);

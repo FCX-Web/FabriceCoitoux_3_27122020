@@ -19,6 +19,11 @@
         z-index: -1;
         display: inline-block;
         transform: rotateY(0turn);
+        // @for $i from 1 through 8 {
+        //     &-#{$i} {
+        //         animation: letter-rotation str-insert('$duration-', #{$i}, 11) 500ms;
+        //     }
+        // }
         &-1 {
             animation: letter-rotation $duration-1 $delay-1;
             @include color-darken ($color_primary, $delay-1 / 40);
