@@ -1,8 +1,7 @@
-$duration: 3000ms;
-main {
+.main-index {
     opacity: 1;
     z-index: 1;
-    animation: loader $duration;
+    animation: main-loader $duration;
 }
 
 .spin-title {
@@ -14,13 +13,44 @@ main {
     font-family: 'Shrikhand';
     color: #000000;
     font-weight: bold;
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     &__letter {
         opacity: 0;
         z-index: -1;
         display: inline-block;
         transform: rotateY(0turn);
-        animation: letter-rotation $duration;
+        &-1 {
+            animation: letter-rotation $duration-1 $delay-1;
+            @include color-darken ($color_primary, $delay-1 / 40);
+        }
+        &-2 {
+            animation: letter-rotation $duration-2 $delay-2;
+            @include color-darken ($color_primary, $delay-2 / 40);
+        }
+        &-3 {
+            animation: letter-rotation $duration-3 $delay-3;
+            @include color-darken ($color_primary, $delay-3 / 40);
+        }
+        &-4 {
+            animation: letter-rotation $duration-4 $delay-4;
+            @include color-darken ($color_primary, $delay-4 / 40);
+        }
+        &-5 {
+            animation: letter-rotation $duration-5 $delay-5;
+            @include color-darken ($color_primary, $delay-5 / 40);
+        }
+        &-6 {
+            animation: letter-rotation $duration-6 $delay-6;
+            @include color-darken ($color_primary, $delay-6 / 40);
+        }
+        &-7 {
+            animation: letter-rotation $duration-7 $delay-7;
+            @include color-darken ($color_primary, $delay-7 / 40);
+        }
+        &-8 {
+            animation: letter-rotation $duration-8 $delay-8;
+            @include color-darken ($color_primary, $delay-8 / 40);
+        }
     }
 }
 

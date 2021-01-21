@@ -5,7 +5,25 @@ $color_reverse: #ffffff;
 $color_background: #808080;
 $breakpoints-min: (small: 0, mobile: 370px, tablet: 669px, laptop: 992px, desktop: 1200px);
 $breakpoints-max: (small: 369px, mobile: 668px, tablet: 991px, laptop: 1199px, desktop: 1800px);
-// Loading
+//loading
 $num-items:16;
 $load-duration: 600ms;
 $load-delay: 100ms;
+//spinner
+$duration: 3000ms;
+$delay-1: 200ms;
+$delay-2: 400ms;
+$delay-3: 600ms;
+$delay-4: 100ms;
+$delay-5: 300ms;
+$delay-6: 700ms;
+$delay-7: 100ms;
+$delay-8: 500ms;
+$duration-1: $duration - $delay-1;
+$duration-2: $duration - $delay-2;
+$duration-3: $duration - $delay-3;
+$duration-4: $duration - $delay-4;
+$duration-5: $duration - $delay-5;
+$duration-6: $duration - $delay-6;
+$duration-7: $duration - $delay-7;
+$duration-8: $duration - $delay-8;
