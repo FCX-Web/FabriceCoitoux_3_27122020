@@ -1,4 +1,4 @@
-@keyframes loader {
+@keyframes main-loader {
   0% {
     opacity: 0.1;
     z-index: -1;
@@ -16,19 +16,22 @@
   0% {
     opacity: 1;
     z-index: 1;
-    transform: rotateY(0turn);
+    transform: rotateY(0.5turn);
   }
-  80% {
+  70% {
     opacity: 1;
     z-index: 1;
-    transform: rotateY(1turn);
-    color: #9356DC;
+    transform: rotateY(2turn);
+  }
+  90% {
+    opacity: 1;
+    z-index: 1;
+    transform: rotateY(2turn);
   }
   100% {
-    transform: rotateY(1turn);
+    transform: rotateY(2turn);
     opacity: 0;
     z-index: -1;
-    color: #FF79DA;
   }
 }
 @keyframes loader-bar {
@@ -69,18 +72,24 @@
   50% {
     transform: scaleX(0.52);
   }
-  60% {
+  55% {
     transform: scaleX(0.65);
     animation-timing-function: linear;
   }
-  70% {
+  60% {
     transform: scaleX(0.78);
-    animation-timing-function: linear;
   }
-  80% {
+  70% {
     transform: scaleX(1);
     opacity: 1;
     z-index: 1;
+    animation-timing-function: linear;
+  }
+  90% {
+    transform: scaleX(1);
+    opacity: 1;
+    z-index: 1;
+    animation-timing-function: linear;
   }
   100% {
     transform: scaleX(1);
@@ -546,10 +555,10 @@ header img {
   background: linear-gradient(to bottom right, #ff83dd, #985ede);
 }
 
-main {
+.main-index {
   opacity: 1;
   z-index: 1;
-  animation: loader 3000ms;
+  animation: main-loader 3000ms;
 }
 
 .spin-title {
@@ -561,14 +570,45 @@ main {
   font-family: "Shrikhand";
   color: #000000;
   font-weight: bold;
-  font-size: 2.5rem;
+  font-size: 1.8rem;
 }
 .spin-title__letter {
   opacity: 0;
   z-index: -1;
   display: inline-block;
   transform: rotateY(0turn);
-  animation: letter-rotation 3000ms;
+}
+.spin-title__letter-1 {
+  animation: letter-rotation 2800ms 200ms;
+  color: #8641d8;
+}
+.spin-title__letter-2 {
+  animation: letter-rotation 2600ms 400ms;
+  color: #782cd3;
+}
+.spin-title__letter-3 {
+  animation: letter-rotation 2400ms 600ms;
+  color: #6c27be;
+}
+.spin-title__letter-4 {
+  animation: letter-rotation 2900ms 100ms;
+  color: #8c4bda;
+}
+.spin-title__letter-5 {
+  animation: letter-rotation 2700ms 300ms;
+  color: #7f36d5;
+}
+.spin-title__letter-6 {
+  animation: letter-rotation 2300ms 700ms;
+  color: #6625b4;
+}
+.spin-title__letter-7 {
+  animation: letter-rotation 2900ms 100ms;
+  color: #8c4bda;
+}
+.spin-title__letter-8 {
+  animation: letter-rotation 2500ms 500ms;
+  color: #722ac9;
 }
 
 .bar {
