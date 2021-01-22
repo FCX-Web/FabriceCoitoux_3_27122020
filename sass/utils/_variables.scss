@@ -1,14 +1,18 @@
+//color
 $color_primary: #9356DC;
 $color_secondary: #FF79DA;
 $color_tertiary: #99E2D0;
 $color_reverse: #ffffff;
 $color_background: #808080;
+//breakpoints
 $breakpoints-min: (small: 0, mobile: 370px, tablet: 669px, laptop: 992px, desktop: 1200px);
 $breakpoints-max: (small: 369px, mobile: 668px, tablet: 991px, laptop: 1199px, desktop: 1800px);
-//loading
-$num-items:16;
+//loading menus
 $load-duration: 600ms;
 $load-delay: 100ms;
+//itérations
+$num-spin-letter: 8;
+$num-items:16;
 //spinner
 $duration: 3000ms;
 $delay-1: 200ms;
@@ -19,11 +23,4 @@ $delay-5: 300ms;
 $delay-6: 700ms;
 $delay-7: 100ms;
 $delay-8: 500ms;
-$duration-1: $duration - $delay-1;
-$duration-2: $duration - $delay-2;
-$duration-3: $duration - $delay-3;
-$duration-4: $duration - $delay-4;
-$duration-5: $duration - $delay-5;
-$duration-6: $duration - $delay-6;
-$duration-7: $duration - $delay-7;
-$duration-8: $duration - $delay-8;
+$map-spinner: ( 1: ($duration - $delay-1) $delay-1, 2: ($duration - $delay-2) $delay-2, 3: ($duration - $delay-3) $delay-3, 4: ($duration - $delay-4) $delay-4, 5: ($duration - $delay-5) $delay-5, 6: ($duration - $delay-6) $delay-6, 7: ($duration - $delay-7) $delay-7, 8: ($duration - $delay-8) $delay-8)
