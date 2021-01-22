@@ -135,6 +135,88 @@
 /*index*/
 /*card*/
 /*rxxx*/
+.main-index {
+  opacity: 1;
+  z-index: 1;
+  animation: main-loader 3000ms;
+}
+
+.spin-title {
+  position: absolute;
+  top: 40%;
+  left: 15%;
+  width: 70%;
+  text-align: center;
+  font-family: "Shrikhand";
+  color: #000000;
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+.spin-title__letter {
+  opacity: 0;
+  z-index: -1;
+  display: inline-block;
+  transform: rotateY(0turn);
+}
+.spin-title__letter-1 {
+  animation: letter-rotation 2800ms 200ms;
+  color: #6726b6;
+}
+.spin-title__letter-2 {
+  animation: letter-rotation 2600ms 400ms;
+  color: #762bcf;
+}
+.spin-title__letter-3 {
+  animation: letter-rotation 2400ms 600ms;
+  color: #5e22a5;
+}
+.spin-title__letter-4 {
+  animation: letter-rotation 2900ms 100ms;
+  color: #8641d8;
+}
+.spin-title__letter-5 {
+  animation: letter-rotation 2700ms 300ms;
+  color: #6224ad;
+}
+.spin-title__letter-6 {
+  animation: letter-rotation 2300ms 700ms;
+  color: #481a7f;
+}
+.spin-title__letter-7 {
+  animation: letter-rotation 2900ms 100ms;
+  color: #8038d6;
+}
+.spin-title__letter-8 {
+  animation: letter-rotation 2500ms 500ms;
+  color: #562098;
+}
+
+.bar {
+  z-index: -1;
+  opacity: 0;
+  position: relative;
+  animation: loader-bar 3000ms;
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  border: 2px solid #000000;
+  height: 10px;
+  width: 70%;
+}
+.bar--progression {
+  z-index: -1;
+  opacity: 0;
+  background: linear-gradient(to right, #ff83dd, #985ede);
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: progress-bar 3000ms;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 10px;
+  width: 100%;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -236,7 +318,6 @@ main {
   z-index: 1;
   opacity: 1;
   animation: trans-heart 500ms ease-in;
-  -webkit-animation: trans-heart 500ms ease-in;
 }
 .card-rest__description__button__heart--colored {
   position: absolute;
@@ -552,88 +633,6 @@ header img {
 .command:hover {
   box-shadow: 3px 3px 3px #858585;
   background: linear-gradient(to bottom right, #ff83dd, #985ede);
-}
-
-.main-index {
-  opacity: 1;
-  z-index: 1;
-  animation: main-loader 3000ms;
-}
-
-.spin-title {
-  position: absolute;
-  top: 40%;
-  left: 15%;
-  width: 70%;
-  text-align: center;
-  font-family: "Shrikhand";
-  color: #000000;
-  font-weight: bold;
-  font-size: 1.8rem;
-}
-.spin-title__letter {
-  opacity: 0;
-  z-index: -1;
-  display: inline-block;
-  transform: rotateY(0turn);
-}
-.spin-title__letter-1 {
-  animation: letter-rotation 2800ms 200ms;
-  color: #8641d8;
-}
-.spin-title__letter-2 {
-  animation: letter-rotation 2600ms 400ms;
-  color: #782cd3;
-}
-.spin-title__letter-3 {
-  animation: letter-rotation 2400ms 600ms;
-  color: #6c27be;
-}
-.spin-title__letter-4 {
-  animation: letter-rotation 2900ms 100ms;
-  color: #8c4bda;
-}
-.spin-title__letter-5 {
-  animation: letter-rotation 2700ms 300ms;
-  color: #7f36d5;
-}
-.spin-title__letter-6 {
-  animation: letter-rotation 2300ms 700ms;
-  color: #6625b4;
-}
-.spin-title__letter-7 {
-  animation: letter-rotation 2900ms 100ms;
-  color: #8c4bda;
-}
-.spin-title__letter-8 {
-  animation: letter-rotation 2500ms 500ms;
-  color: #722ac9;
-}
-
-.bar {
-  z-index: -1;
-  opacity: 0;
-  position: relative;
-  animation: loader-bar 3000ms;
-  position: absolute;
-  top: 50%;
-  left: 15%;
-  border: 2px solid #000000;
-  height: 10px;
-  width: 70%;
-}
-.bar--progression {
-  z-index: -1;
-  opacity: 0;
-  background: linear-gradient(to right, #ff83dd, #985ede);
-  transform: scaleX(0);
-  transform-origin: left;
-  animation: progress-bar 3000ms;
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 10px;
-  width: 100%;
 }
 
 .locate {
