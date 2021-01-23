@@ -92,7 +92,7 @@
         flex-direction: column;
         margin: 15px 0 15px 12px;
         width: 80%;
-        @include item-description;
+        @include media-item-description;
         &--font {
             @include color-darken($color_background, 40);
             margin-bottom: 2px;
