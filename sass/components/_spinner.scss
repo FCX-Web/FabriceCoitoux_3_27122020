@@ -20,7 +20,7 @@
         display: inline-block;
         transform: rotateY(0turn);
         @for $i from 1 through $num-spin-letter {
-            &-#{$i} {
+            &--#{$i} {
                 animation: letter-rotation map-get($map-spinner, $i);
                 @include color-darken ($color_primary, random(30));
             }
