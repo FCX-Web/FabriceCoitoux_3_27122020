@@ -46,7 +46,7 @@
     }
 }
 
-@mixin item-description {
+@mixin media-item-description {
     @media screen and (max-width: map-get($breakpoints-max, small)) {
         width: 70%;
     }
