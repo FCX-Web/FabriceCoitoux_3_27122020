@@ -160,35 +160,35 @@
 }
 .spin-title__letter-1 {
   animation: letter-rotation 2800ms 200ms;
-  color: #4a1b83;
+  color: #8038d6;
 }
 .spin-title__letter-2 {
   animation: letter-rotation 2600ms 400ms;
-  color: #782cd3;
+  color: #833dd7;
 }
 .spin-title__letter-3 {
   animation: letter-rotation 2400ms 600ms;
-  color: #59209c;
+  color: #8845d9;
 }
 .spin-title__letter-4 {
   animation: letter-rotation 2900ms 100ms;
-  color: #5e22a5;
+  color: #481a7f;
 }
 .spin-title__letter-5 {
   animation: letter-rotation 2700ms 300ms;
-  color: #6c27be;
+  color: #8038d6;
 }
 .spin-title__letter-6 {
   animation: letter-rotation 2300ms 700ms;
-  color: #4a1b83;
+  color: #7d34d5;
 }
 .spin-title__letter-7 {
   animation: letter-rotation 2900ms 100ms;
-  color: #732acb;
+  color: #5e22a5;
 }
 .spin-title__letter-8 {
   animation: letter-rotation 2500ms 500ms;
-  color: #6726b6;
+  color: #4f1d8b;
 }
 
 .bar {
