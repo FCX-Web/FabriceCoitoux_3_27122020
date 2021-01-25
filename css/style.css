@@ -150,35 +150,35 @@
 }
 .spin-title__letter--1 {
   animation: letter-rotation 2800ms 200ms;
-  color: #762bcf;
+  color: #8845d9;
 }
 .spin-title__letter--2 {
   animation: letter-rotation 2600ms 400ms;
-  color: #6525b1;
+  color: #8641d8;
 }
 .spin-title__letter--3 {
   animation: letter-rotation 2400ms 600ms;
-  color: #6525b1;
+  color: #782cd3;
 }
 .spin-title__letter--4 {
   animation: letter-rotation 2900ms 100ms;
-  color: #5e22a5;
+  color: #9052db;
 }
 .spin-title__letter--5 {
   animation: letter-rotation 2700ms 300ms;
-  color: #732acb;
+  color: #7b30d4;
 }
 .spin-title__letter--6 {
   animation: letter-rotation 2300ms 700ms;
-  color: #8e4eda;
+  color: #8845d9;
 }
 .spin-title__letter--7 {
   animation: letter-rotation 2900ms 100ms;
-  color: #8641d8;
+  color: #6525b1;
 }
 .spin-title__letter--8 {
   animation: letter-rotation 2500ms 500ms;
-  color: #8641d8;
+  color: #6c27be;
 }
 
 .bar {
@@ -186,7 +186,7 @@
   opacity: 0;
   position: relative;
   animation: loader-bar 3000ms;
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 15%;
   border: 2px solid #000000;
