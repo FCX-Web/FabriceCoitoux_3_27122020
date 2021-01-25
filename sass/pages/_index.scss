@@ -6,7 +6,7 @@
     box-shadow: 0px 5px 5px #cccccc inset;
     @include backcolor-lighten($color_background, 40);
     &__i {
-        margin: 0 15px 0 92px;
+        margin: 0 15px 0 10px;
     }
     &__input {
         @include backcolor-lighten($color_background, 40);
@@ -63,6 +63,9 @@
             @include media-steps__list__item;
             &:not(:last-child) {
                 margin: 0 auto 22px;
+            }
+            &:last-child {
+                @include backcolor-lighten ($color_primary, 35);
             }
             &__i {
                 position: absolute;
