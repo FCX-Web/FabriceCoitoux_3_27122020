@@ -96,22 +96,12 @@
     z-index: -1;
   }
 }
-@keyframes heart-favorite {
-  0% {
-    opacity: 1;
-    z-index: 1;
-  }
-  100% {
-    opacity: 0;
-    z-index: -1;
-  }
-}
 @keyframes trans-heart {
   0% {
     color: #ffffff;
   }
   100% {
-    color: #9356DC;
+    color: #bc95e9;
   }
 }
 @keyframes items {
@@ -142,7 +132,7 @@
 }
 
 .spin-title {
-  position: absolute;
+  position: fixed;
   top: 40%;
   left: 15%;
   width: 70%;
@@ -160,35 +150,35 @@
 }
 .spin-title__letter--1 {
   animation: letter-rotation 2800ms 200ms;
-  color: #521e90;
+  color: #762bcf;
 }
 .spin-title__letter--2 {
   animation: letter-rotation 2600ms 400ms;
-  color: #59209c;
+  color: #6525b1;
 }
 .spin-title__letter--3 {
   animation: letter-rotation 2400ms 600ms;
-  color: #6023a9;
+  color: #6525b1;
 }
 .spin-title__letter--4 {
   animation: letter-rotation 2900ms 100ms;
-  color: #8b49d9;
+  color: #5e22a5;
 }
 .spin-title__letter--5 {
   animation: letter-rotation 2700ms 300ms;
-  color: #8845d9;
+  color: #732acb;
 }
 .spin-title__letter--6 {
   animation: letter-rotation 2300ms 700ms;
-  color: #562098;
+  color: #8e4eda;
 }
 .spin-title__letter--7 {
   animation: letter-rotation 2900ms 100ms;
-  color: #4f1d8b;
+  color: #8641d8;
 }
 .spin-title__letter--8 {
   animation: letter-rotation 2500ms 500ms;
-  color: #8845d9;
+  color: #8641d8;
 }
 
 .bar {
@@ -324,7 +314,7 @@ main {
   top: 0;
   right: 7px;
   font-size: 1.5rem;
-  color: #9356DC;
+  color: #bc95e9;
   z-index: -1;
   opacity: 0;
   transition: opacity;
@@ -644,7 +634,7 @@ header img {
   background-color: #e6e6e6;
 }
 .locate__i {
-  margin: 0 15px 0 92px;
+  margin: 0 15px 0 10px;
 }
 .locate__input {
   background-color: #e6e6e6;
@@ -730,6 +720,9 @@ header img {
 }
 .steps__list__item:not(:last-child) {
   margin: 0 auto 22px;
+}
+.steps__list__item:last-child {
+  background-color: #f2eafb;
 }
 .steps__list__item__i {
   position: absolute;
